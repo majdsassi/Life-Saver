@@ -1,5 +1,4 @@
 <?php
-require_once "./config.php" ;
 require_once "/utils/connection.php" ;?>
 <body>
 <?php include "/includes/header.php"; ?>
@@ -28,7 +27,6 @@ try {
         echo "<div class='col-12'><p class='text-center'>No centers found.</p></div>";
     }
 } catch (PDOException $e) {
-    header("Location:" . DOMAIN . "index.php?error=database_error");
     error_log("Database error: " . $e->getMessage());
     exit;
 }
