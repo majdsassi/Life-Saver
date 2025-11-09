@@ -35,9 +35,8 @@
                     
                 </li>
                 <li class="nav-item">
-                    <a href="/medecin/logout.php" class="btn btn-outline-light">
-                        <i class="bi bi-box-arrow-right"></i> Déconnexion
-                    </a>
+                    <a href="/medecin/logout.php" class="nav-link text-white">Logout</a>
+                    
                 </li>
             </ul>
                 
