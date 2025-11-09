@@ -12,8 +12,6 @@ try {
     // 3. Configuration importante : Afficher les exceptions/erreurs SQL
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo "Connexion à la base de données établie avec succès !";
-
 } catch (PDOException $e) {
     // Gestion de l'erreur
     die("Erreur de connexion : " . $e->getMessage());
