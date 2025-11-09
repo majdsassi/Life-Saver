@@ -25,7 +25,7 @@ if(isset($_SESSION["user_id"])){
                 </thead>
                 <tbody>
                     <?php
-                        $stmt = $pdo->query("SELECT * FROM dons WHERE status = 'EN STOCK'");
+                        $stmt = $pdo->query("SELECT * FROM dons WHERE `statut` = 'EN STOCK'");
                         if ($stmt->rowCount() > 0) {
                             while ($row = $stmt->fetch()) {
                                 echo "<tr>
