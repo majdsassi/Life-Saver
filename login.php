@@ -17,7 +17,7 @@ include "./includes/head.php" ;
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form action="./handlers/loginHandler.php" method="POST">
+                <form action="handlers/loginHandler.php" method="POST">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <a class="navbar-brand" href="#">
