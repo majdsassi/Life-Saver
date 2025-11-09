@@ -103,6 +103,7 @@ if(isset($_SESSION["user_id"])){
         </div>
     </div>
 </div>
+                    </body>
          <?php include 'includes/footer.php';
 
 

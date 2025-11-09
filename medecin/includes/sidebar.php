@@ -32,8 +32,15 @@
                 </li>
                 <li class="nav-item">
                     <a href="tests.php" class="nav-link text-white">Tests</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/medecin/logout.php" class="btn btn-outline-light btn-sm mt-2 mt-lg-0">
+                        <i class="bi bi-box-arrow-right"></i> Déconnexion
+                    </a>
                 </li>
             </ul>
+                
         </div>
     </div>
 
