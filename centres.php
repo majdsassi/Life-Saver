@@ -1,10 +1,8 @@
 <?php
-require_once "config.php";
-require_once __DIR__ . "/utils/connection.php";
-include __DIR__ . "/includes/head.php"; 
-?>
+require_once "./config.php" ;
+require_once "/utils/connection.php" ;?>
 <body>
-<?php include __DIR__ . "/includes/header.php"; ?>
+<?php include "/includes/header.php"; ?>
 <div class="container">
     <h1 class="section-title">Centers</h1>
     <div class="row">
@@ -37,7 +35,7 @@ try {
 ?>
     </div>
 </div>
-<?php include __DIR__ . "/includes/footer.php"; ?> 
+<?php include "/includes/footer.php"; ?> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
