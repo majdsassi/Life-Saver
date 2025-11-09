@@ -7,7 +7,7 @@ if(isset($_SESSION["user_id"])){
          include 'includes/header.php'; 
          include "includes/sidebar.php" ?>
          <div class="container-fluid mt-4">
-    <h2 class="mb-4">Tableau de Bord - Administration</h2>
+    <h2 class="mb-4">Tableau de Bord - MEDECIN </h2>
 
     <div class="row">
         <!-- donneurs -->
