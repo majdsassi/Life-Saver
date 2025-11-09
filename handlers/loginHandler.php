@@ -15,7 +15,7 @@ if (!empty($_POST)) {
             if ($user && password_verify($_POST['password'], $user["mot_de_passe"])) {
                 $_SESSION['user_id'] = $user["id_utilisateur"];
                 $_SESSION['user_role'] = $user["role"] ; 
-                header("Location:".DOMAIN.strtolower($user["role"])"/index.php?message=welcome");
+                header("Location:".DOMAIN.strtolower($user['role'])."/index.php");
                 exit;
             } else {
                 // Creds Ghalta 
