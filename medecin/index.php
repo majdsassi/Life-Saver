@@ -3,7 +3,7 @@ session_start();
 require_once '../config.php';
 require_once '../utils/connection.php' ; 
 if(isset($_SESSION["user_id"])){
-    if($_SESSION["role"] == "MEDECIN") {
+    if($_SESSION["user_role"] == "MEDECIN") {
         echo " Welcome ! " ;
 
 
