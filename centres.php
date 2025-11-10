@@ -9,10 +9,10 @@ try {
     die("Connection error: " . $e->getMessage());
 }
 ?>
-    <?php include "/includes/head.php";
+    <?php include "./includes/head.php";
     ?>
     <body>
-        <?php    include "/includes/header.php"; ?>
+        <?php    include "./includes/header.php"; ?>
     
     <div class="container py-5">
         <h1 class="section-title">Collection Centers</h1>
@@ -67,7 +67,7 @@ try {
         </div>
     </div>
     
-    <?php include "/includes/footer.php"; ?> 
+    <?php include "./includes/footer.php"; ?> 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
