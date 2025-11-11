@@ -52,7 +52,6 @@ try {
     <div class="form-container">
         <h2 class="form-title">Validation Test</h2>
         <form method="POST" action="/handlers/testHandler.php">
-            <!-- Hidden field to pass the donation ID -->
             <input type="hidden" name="id_don" value="<?php echo htmlspecialchars($id_don); ?>">
             
             <div class="mb-3">
