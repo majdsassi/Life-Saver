@@ -54,7 +54,7 @@ if(isset($_SESSION["user_id"])){
                                         
                                         $test_date = $row['date_test'];
                                         
-                                        // Handle empty notes
+                                        
                                         $notes = !empty($row['notes_medecin']) ? $row['notes_medecin'] : '<span class="text-muted fst-italic">No notes</span>';
                                     ?>
                                     <tr>
@@ -91,7 +91,7 @@ if(isset($_SESSION["user_id"])){
                             </table>
                         </div>
                         
-                        <!-- Summary Statistics -->
+                        <!-- Statistics -->
                         <div class="row mt-4">
                             <div class="col-md-6">
                                 <div class="card">
@@ -100,8 +100,8 @@ if(isset($_SESSION["user_id"])){
                                             <i class="bi bi-graph-up me-2"></i>Test Summary
                                         </h6>
                                         <?php
-                                        // Reset pointer and get statistics
-                                        $stmt->execute();
+                                        
+                                        $stmt->execute(); // Traja3k ml lowl kimma file.seek(0) ;
                                         $total_tests = 0;
                                         $conforme_count = 0;
                                         
@@ -135,7 +135,7 @@ if(isset($_SESSION["user_id"])){
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php if ($total_tests > 0): ?>
+                                        <?php if ($total_tests > 0){?>
                                         <div class="mt-3">
                                             <div class="progress" style="height: 8px;">
                                                 <div class="progress-bar bg-success" role="progressbar" 
@@ -146,7 +146,7 @@ if(isset($_SESSION["user_id"])){
                                             </div>
                                             <small class="text-muted"><?php echo $conforme_percentage; ?>% of tests are conforme</small>
                                         </div>
-                                        <?php endif; ?>
+                                        <?php }?>
                                     </div>
                                 </div>
                             </div>
