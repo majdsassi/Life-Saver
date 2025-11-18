@@ -14,7 +14,8 @@ if(isset($_SESSION["user_id"])){
         <div class="col-md-3 mb-3">
             <div class="card shadow-sm border-0">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Donneurs</h5>
+                    <h5 class="card-title">Donneurs</h5> 
+
                     <h2 class="text-primary">
                         <?php
                             $stmt = $pdo->query("SELECT COUNT(*) FROM donneurs AND `id_centre`= $_SESSION['centre_id']");
@@ -85,13 +86,15 @@ if(isset($_SESSION["user_id"])){
                 </thead>
                 <tbody>
                     <?php
-                        $stmt = $pdo->query("SELECT groupe_sanguin, niveau_alerte FROM besoins WHERE niveau_alerte IN ('URGENT','CRITIQUE')");
+                        $stmt = $pdo->query("SELECT groupe_sanguin, niveau_alerte , quantite_cible FROM besoins WHERE niveau_alerte IN ('URGENT','CRITIQUE')");
                         if ($stmt->rowCount() > 0) {
                             while ($row = $stmt->fetch()) {
                                 $color = $row['niveau_alerte'] === 'URGENT' ? 'text-danger' : 'text-warning';
                                 echo "<tr>
                                     <td>{$row['groupe_sanguin']}</td>
-                                    <td class='$color'><strong>{$row['niveau_alerte']}</strong></td>
+                                    <td class='$color'><strong>{$row['niveau_alerte']}</strong></td> 
+                                    <td>{$row['quantite_cible']}ML</td>
+
                                   </tr>";
                             }
                         } else {
