@@ -1,8 +1,8 @@
-<?php 
-include "./includes/head.php" ;?> 
-<body>
 <?php
-  include "./includes/header.php" ; ?>
+include "./includes/head.php"; ?>
+<body class="app-theme public-theme">
+<?php
+include "./includes/header.php"; ?>
 <section id="blood-types" class="blood-types">
         <div class="container">
             <h2 class="section-title">Blood Types Compatibility</h2>
@@ -68,6 +68,6 @@ include "./includes/head.php" ;?>
             </div>
         </div>
     </section>
-      <?php include "./includes/footer.php" ; ?> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<?php include "./includes/footer.php"; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

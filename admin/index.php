@@ -1,11 +1,11 @@
 <?php
-    require_once './includes/check_auth.php';
-    require_once '../utils/connection.php';
+    require_once __DIR__ . '/includes/check_auth.php';
+    require_once __DIR__ . '/../utils/connection.php';
     $page_title = "Tableau de Bord";
 ?>
 
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/sidebar.php'; ?>
+<?php include __DIR__ . '/includes/header.php'; ?>
+<?php include __DIR__ . '/includes/sidebar.php'; ?>
 
 <div class="container-fluid mt-4">
     <h2 class="mb-4">Tableau de Bord - Administration</h2>
@@ -105,4 +105,4 @@
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>
