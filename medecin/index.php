@@ -35,7 +35,8 @@ if(isset($_SESSION["user_id"])){
                     <i class="bi-check-circle"></i>
                     <h2 class="text-success">
                         <?php
-                            $stmt = $pdo->query("SELECT COUNT(*) FROM dons WHERE statut='VALIDE'  AND `id_centre`= $_SESSION['centre_id']");
+                            $stmt = $pdo->prepare("SELECT COUNT(*) FROM dons WHERE statut='VALIDE'  AND `id_centre`= ?");
+                            $stmt->execute([$_POST['centre_id']]) ;
                             echo $stmt->fetchColumn();
                         ?>
                     </h2>
