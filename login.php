@@ -9,54 +9,57 @@ $errors = [
     "access_report" => "You Try To access The Handler Directly That's Forbidden a Report will be sent , Your IP : ".$_SERVER['REMOTE_ADDR']
 ];
 ?> 
-<body>
+<body class="app-theme public-theme">
 <?php
   include "./includes/header.php" ; ?>
-  <section class="vh-100" style="background-color: #cbd1d7ff;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem;">
+  <section class="auth-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="card auth-card">
           <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="./images/login.jpeg"
-                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            <div class="col-md-5 illustration d-none d-md-flex align-items-center justify-content-center p-4">
+              <div class="text-center">
+                <img src="./images/login.jpeg" alt="login" class="img-fluid rounded-4 shadow-lg mb-4">
+                <h4 class="fw-bold">Rejoignez la mission</h4>
+                <p class="mb-0">Chaque connexion nous rapproche d’une vie sauvée.</p>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-              <div class="card-body p-4 p-lg-5 text-black">
+            <div class="col-md-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5">
 
-                <form action="handlers/loginHandler.php" method="POST">
+                <form action="handlers/loginHandler.php" method="POST" class="app-theme">
 
-                  <div class="d-flex align-items-center mb-3 pb-1">
-                    <a class="navbar-brand" href="#">
-                <i class="fas fa-heartbeat me-2"></i>LifeSaver
-            </a>
+                  <div class="d-flex align-items-center mb-3">
+                    <span class="navbar-brand text-dark fs-4">
+                        <i class="bi bi-droplet-half text-danger me-2"></i>LifeSaver
+                    </span>
                   </div>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                  <h5 class="fw-bold mb-4">Connectez-vous à votre espace</h5>
                   <?php 
-                  if(isset($_GET["error"])) {
+                  if(isset($_GET["error"]) && isset($errors[$_GET["error"]])) {
                     echo '
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Error:</strong> ' . htmlspecialchars($errors[$_GET["error"]]) . '
+  <strong>Erreur :</strong> ' . htmlspecialchars($errors[$_GET["error"]]) . '
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
 
                   }
                   ?>
 
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="username" class="form-control form-control-lg"  name="username"/>
-                    <label class="form-label" for="form2Example17">Username</label>
+                  <div class="mb-3">
+                    <label class="form-label" for="username">Nom d’utilisateur</label>
+                    <input type="text" id="username" class="form-control form-control-lg"  name="username" required/>
                   </div>
 
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="password" class="form-control form-control-lg" name="password" />
-                    <label class="form-label" for="form2Example27">Password</label>
+                  <div class="mb-4">
+                    <label class="form-label" for="password">Mot de passe</label>
+                    <input type="password" id="password" class="form-control form-control-lg" name="password" required />
                   </div>
 
-                  <div class="pt-1 mb-4">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-danger btn-lg btn-block" type="submit">Login</button>
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Se connecter</button>
                   </div>
                 </form>
 
@@ -70,5 +73,5 @@ $errors = [
 </section>
 
   <?php include "./includes/footer.php" ; ?> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

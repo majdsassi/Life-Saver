@@ -1,27 +1,25 @@
 <?php
-require_once '../../utils/connection.php';
-require_once '../includes/check_auth.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $cin = htmlspecialchars($_POST['cin']);
-  $nom = htmlspecialchars($_POST['nom']);
-  $prenom = htmlspecialchars($_POST['prenom']);
-  $date_naissance = htmlspecialchars($_POST['date_naissance']);
-  $telephone = htmlspecialchars($_POST['telephone']);
-  $adresse = htmlspecialchars($_POST['adresse']);
-  $groupe = htmlspecialchars($_POST['groupe_sanguin']);
+    require_once __DIR__ . '/../../utils/connection.php';
+    require_once __DIR__ . '/../includes/check_auth.php';
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $cin            = htmlspecialchars($_POST['cin']);
+        $nom            = htmlspecialchars($_POST['nom']);
+        $prenom         = htmlspecialchars($_POST['prenom']);
+        $date_naissance = htmlspecialchars($_POST['date_naissance']);
+        $telephone      = htmlspecialchars($_POST['telephone']);
+        $adresse        = htmlspecialchars($_POST['adresse']);
+        $groupe         = htmlspecialchars($_POST['groupe_sanguin']);
 
-  // Insertion sécurisée via PDO
-  $stmt = $pdo->prepare("INSERT INTO donneurs (cin, nom, prenom, date_naissance, telephone, adresse, groupe_sanguin)
-                           VALUES (?, ?, ?, ?, ?, ?, ?)");
-  $stmt->execute([$cin, $nom, $prenom, $date_naissance, $telephone, $adresse, $groupe]);
+        $stmt = $pdo->prepare("INSERT INTO donneurs (cin, nom, prenom, date_naissance, telephone, adresse, groupe_sanguin) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$cin, $nom, $prenom, $date_naissance, $telephone, $adresse, $groupe]);
 
-  header("Location: ../controls/donneurs.php?message=201");
-  exit();
-}
+        header('Location: ' . DOMAIN . 'admin/donneurs.php?message=201');
+        exit();
+    }
 ?>
 
-<?php include '../includes/header.php'; ?>
-<?php include '../includes/sidebar.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
+<?php include __DIR__ . '/../includes/sidebar.php'; ?>
 
 <div class="container mt-4">
   <h3>Ajouter un Donneur</h3>
@@ -76,9 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="mt-3">
       <button type="submit" class="btn btn-success">Ajouter</button>
-      <a href="../donneurs.php" class="btn btn-secondary">Annuler</a>
+      <a href="<?php echo DOMAIN . 'admin/donneurs.php'; ?>" class="btn btn-secondary">Annuler</a>
     </div>
   </form>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 // require_once "C:\\xampp\\htdocs\\Life-Saver\\config.php";
-require_once "../config.php" ;
+require_once __DIR__ . '/../config.php';
 
 try {
     // 1. Définition de la chaîne de connexion (DSN)
