@@ -18,7 +18,7 @@ if(isset($_SESSION["user_id"])){
                     <i class="bi-people"></i>
                     <h2 class="text-primary">
                         <?php
-                            $stmt = $pdo->prepare("SELECT COUNT(*) FROM donneurs WHERE `id_centre`= ?");
+                            $stmt = $pdo->prepare("SELECT COUNT(*) FROM donneurs ");
                             $stmt->execute([$_SESSION['centre_id']]) ;
                             echo $stmt->fetchColumn();
                         ?>
