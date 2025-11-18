@@ -10,7 +10,7 @@ if(isset($_SESSION["user_id"])){
         <div class="row">
             <div class="col-12">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header bg-danger text-white">
                         <div class="d-flex justify-content-between align-items-center">
                             <h3 class="card-title mb-0">
                                 <i class="bi bi-clipboard2-pulse me-2"></i>
