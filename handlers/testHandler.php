@@ -61,13 +61,13 @@ if (!empty($_POST)) {
                     exit;
                 }
             } else {
-                header("Location:" . DOMAIN . "medecin/?error=404");
+                header("Location:" . DOMAIN . "medecin/?error=501");
                 exit;
             }
             
         } catch (PDOException $e) {
             error_log("Database error in testHandler: " . $e->getMessage());
-            header("Location:" . DOMAIN . "medecin/?error=database_error".$e->getMessage());
+            header("Location:" . DOMAIN . "medecin/?error=500");
             exit;
         }
     } else {

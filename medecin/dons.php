@@ -2,12 +2,35 @@
 session_start();
 require_once '../config.php';
 require_once '../utils/connection.php'; 
+$messages = [
+    "201" => "Don Changed Succesfully " ] ;
+$errors = [
+    "404" => "Don Not Found" ,
+    "500" => "Server Error : Test Not inserted"
+]
 if(isset($_SESSION["user_id"])){
     if($_SESSION["user_role"] == "MEDECIN") {
          include 'includes/header.php'; 
          include "includes/sidebar.php"; ?>
          <div class="container-fluid mt-4">
     <h2 class="mb-4">Tableau de Bord - MEDECIN </h2>
+    <?php 
+     if(isset($_GET["error"])) {
+                    echo '
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error:</strong> ' . htmlspecialchars($errors[$_GET["error"]]) . '
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+} 
+if(isset($_GET["success"])) {
+                    echo '
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Success :</strong> ' . htmlspecialchars($messages[$_GET["success"]]) . '
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+} 
+    
+    ?>
     <div class="card mt-4 shadow-sm border-0">
         <div class="card-header bg-danger text-white">
             <strong>Dons</strong>
