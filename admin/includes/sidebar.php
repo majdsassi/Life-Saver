@@ -22,8 +22,8 @@
         <ul class="nav flex-column gap-1">
             <?php foreach ($menuItems as $item): ?>
                 <li class="nav-item">
-                    <a href="<?php echo DOMAIN . 'admin/' . $item['file']; ?>" class="nav-link<?php echo $currentPath === $item['file'] ? 'active' : ''; ?>">
-                        <i class="bi                                                                         <?php echo $item['icon']; ?>"></i>
+                    <a href="<?php echo DOMAIN . 'admin/' . $item['file']; ?>" class="nav-link<?php echo $currentPath === $item['file'] ? ' active' : ''; ?>">
+                        <i class="bi <?php echo $item['icon']; ?>"></i>
                         <?php echo $item['label']; ?>
                     </a>
                 </li>
@@ -40,8 +40,8 @@
             <ul class="nav flex-column gap-1">
                 <?php foreach ($menuItems as $item): ?>
                     <li class="nav-item">
-                        <a href="<?php echo DOMAIN . 'admin/' . $item['file']; ?>" class="nav-link d-flex align-items-center gap-2<?php echo $currentPath === $item['file'] ? 'active' : ''; ?>">
-                            <i class="bi                                                                                 <?php echo $item['icon']; ?>"></i>
+                        <a href="<?php echo DOMAIN . 'admin/' . $item['file']; ?>" class="nav-link d-flex align-items-center gap-2<?php echo $currentPath === $item['file'] ? ' active' : ''; ?>">
+                            <i class="bi <?php echo $item['icon']; ?>"></i>
                             <?php echo $item['label']; ?>
                         </a>
                     </li>
