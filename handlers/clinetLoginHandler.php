@@ -14,7 +14,7 @@ if (!empty($_POST)) {
             // Verify user password and set SESSION
             if ($user && password_verify($_POST['password'], $user["password"])) {
                 $_SESSION['user_id'] = $user["id_donneur"];
-                header("Location:".DOMAIN."/client/index.php");
+                header("Location:".DOMAIN."client/index.php");
                 exit;
             } else {
                 // Creds Ghalta 
