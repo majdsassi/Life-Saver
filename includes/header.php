@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <a href="login.php" class="btn btn-outline-light btn-app ms-lg-3">
+            <a href="clinetLogin.php" class="btn btn-outline-light btn-app ms-lg-3">
                 <i class="bi bi-box-arrow-in-right me-1"></i> Connexion
             </a>
         </div>
