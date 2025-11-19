@@ -75,9 +75,18 @@ include __DIR__ . '/includes/sidebar.php';
                         <td>" . htmlspecialchars($row['groupe_sanguin']) . "</td>
                         <td>
                             <a href='" . DOMAIN . "secretaire/actions/edit_donneur.php?id=" . $row['id_donneur'] . "' class='btn btn-sm btn-warning text-dark'>Modifier</a>
-                            <a href='" . DOMAIN . "secretaire/actions/delete_donneur.php?id=" . $row['id_donneur'] . "' class='btn btn-sm btn-danger'>Supprimer</a>
-                        </td>
-                      </tr>";
+                            <a href='" . DOMAIN . "secretaire/actions/delete_donneur.php?id=" . $row['id_donneur'] . "' class='btn btn-sm btn-danger'>Supprimer</a>"
+                        ?>         <?php
+
+                             //  $stmt1 = $pdo->query("SELECT * FROM clients c, donneurs d WHERE c.id_donneur = d.id_donneur");
+                             //  $row1 = $stmt1->fetch(PDO::FETCH_ASSOC);
+                     
+                             //  if (!$row1) {
+                             //      echo "<a href='" . DOMAIN . "secretaire/actions/creer_compte_client.php?id=" . $row['id_donneur'] . "' class='btn btn-sm btn-info'>Creer un compte</a>";
+                             //  }
+                     
+                             echo "</td>";
+                             echo "</tr>";
                 }
                 ?>
             </tbody>
