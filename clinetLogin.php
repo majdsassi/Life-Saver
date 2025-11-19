@@ -62,7 +62,7 @@ $errors = [
                     <button class="btn btn-primary btn-lg" type="submit">Se connecter</button>
                   </div>
                   <div class="mb-4">
-                    <a href="/login.php" class='link-danger'> Staff Login </a>
+                    <a href="/login.php" class='link-primary'> Staff Login </a>
                   </div>
                 </form>
 
