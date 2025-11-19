@@ -57,11 +57,12 @@ $errors = [
                     <label class="form-label" for="password">Mot de passe</label>
                     <input type="password" id="password" class="form-control form-control-lg" name="password" required />
                   </div>
-                <div class="d-grid">
-                    <a href="/login.php" class='link-danger'> Staff Login </a>
-                  </div>
+                
                   <div class="d-grid">
                     <button class="btn btn-primary btn-lg" type="submit">Se connecter</button>
+                  </div>
+                  <div class="mb-4">
+                    <a href="/login.php" class='link-danger'> Staff Login </a>
                   </div>
                 </form>
 
