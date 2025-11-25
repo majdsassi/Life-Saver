@@ -1,0 +1,89 @@
+/* Sidebar container */
+.app-sidebar {
+    width: 240px;
+    background: #0f172a;
+    color: #fff;
+    padding: 20px 15px;
+    min-height: 100vh;
+    border-right: 1px solid #0f172a;
+}
+
+/* Brand */
+.app-sidebar .brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* Default link */
+.app-sidebar .nav-link {
+    color: #bdbdbd;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Hover effect */
+.app-sidebar .nav-link:hover {
+    background: #2d2d2d;
+    color: #fff;
+    transform: translateX(4px);
+}
+
+/* Active state */
+.app-sidebar .nav-link.active {
+    background: #dc3545;
+    color: #fff !important;
+    font-weight: 600;
+    box-shadow: 0 0 8px #dc354580;
+    transform: translateX(6px);
+}
+
+/* Icons */
+.app-sidebar i.bi {
+    font-size: 1.25rem;
+}
+
+/* Offcanvas version */
+.offcanvas-start {
+    width: 240px;
+    background: #1f1f1f !important;
+}
+
+.offcanvas-body .nav-link {
+    color: #ccc;
+    padding: 10px 12px;
+}
+
+.offcanvas-body .nav-link:hover {
+    background: #2d2d2d;
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.offcanvas-body .nav-link.active {
+    background: #dc3545;
+    color: #fff !important;
+    font-weight: 600;
+    box-shadow: 0 0 8px #dc354580;
+    transform: translateX(6px);
+}
+.nav-link {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link:visited {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
