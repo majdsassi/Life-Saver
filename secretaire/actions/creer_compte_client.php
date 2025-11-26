@@ -4,12 +4,18 @@ require_once __DIR__ . '/../../utils/connection.php';
 require_once __DIR__ . '/../includes/check_auth.php';
 require_once __DIR__ . '/../utils/helpers.php';
 
-$donneurId = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$donneurId = 0;
 
-if ($donneurId <= 0) {
-  header('Location: ' . DOMAIN . 'secretaire/donneurs.php?error=missing_id');
-  exit;
+if (!isset($_GET['id'])) {
+  header('Location: ' . DOMAIN . 'secretaire/donneurs.php');
 }
+
+$donneurId = $_GET['id'];
+
+// if (isset($_GET['id'])) {
+//   header('Location: ' . DOMAIN . 'secretaire/donneurs.php?error=missing_id');
+//   exit;
+// }
 
 $donneur = get_donneur_by_id($donneurId);
 
@@ -31,5 +37,6 @@ $stmt->bindParam(':id', $row1["id_donneur"]);
 $stmt->bindParam(':cin', $row1["cin"]);
 $stmt->bindParam(':pwd', $password_gen);
 
-$stmt->execute([]);
+$stmt->execute();
 
+header("Location: " . DOMAIN . 'secretaire/donneurs.php?message=999');
